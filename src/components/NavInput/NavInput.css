@@ -1,21 +1,20 @@
-@import "../../styles/variables";
-
 .nav-input {
-  background: $grey-fade;
+  background: var(--grey-fade);
   border-radius: 5px;
   width: 160px;
   height: 28px;
   margin: 5px 2.5px;
   cursor: pointer;
   border: none;
+
   &:focus {
     outline: none;
   }
 }
 
 .svg-inline--fa.fa-search.fa-w-16 {
-  color: $white;
+  color: var(--white);
   position: absolute;
   top: 12px;
   left: 260px;
-}
+} 

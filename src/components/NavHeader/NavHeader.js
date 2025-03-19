@@ -1,7 +1,7 @@
 import React from 'react';
 import NavRightContainer from 'components/NavRightContainer/NavRightContainer';
 import NavLeftContainer from 'components/NavLeftContainer/NavLeftContainer';
-import './NavHeader.scss';
+import './NavHeader.css';
 
 const NavHeader = () => (
     <div className='nav-header'>

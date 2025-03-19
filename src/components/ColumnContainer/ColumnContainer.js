@@ -3,8 +3,8 @@ import Column from 'components/Column/Column';
 // import columns from 'columns';
 import AddColumn from 'components/AddColumn/AddColumn';
 import uuid from 'uuid/v4';
-import './ColumnContainer.scss';
-import 'components/AddColumn/AddColumn.scss'
+import './ColumnContainer.css';
+import 'components/AddColumn/AddColumn.css'
 
 class ColumnContainer extends Component {
     state = {

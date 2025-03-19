@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Button, { BUTTON_TYPES } from 'components/Button/Button';
 import { faPlus, faTimes } from '@fortawesome/free-solid-svg-icons';
-import './AddColumn.scss';
+import './AddColumn.css';
 
 class AddColumn extends Component {
     state = {

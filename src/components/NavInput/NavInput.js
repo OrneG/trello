@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
-import './NavInput.scss';
+import './NavInput.css';
 
 class NavInput extends Component {
     state = {
@@ -11,7 +11,7 @@ class NavInput extends Component {
         this.setState({ large: true })
     }
     render() {
-        const { onFocus } = this.props;
+        // const { onFocus } = this.props;
         return (
             <>
             <input type='text' className='nav-input' onFocus={this.enlargeInput}

@@ -2,7 +2,7 @@ import React from 'react';
 import Button, {BUTTON_TYPES } from 'components/Button/Button';
 import { faArrowRight, faArchive, faShareAlt } from '@fortawesome/free-solid-svg-icons';
 import { faCopy, faEye } from '@fortawesome/free-regular-svg-icons';
-import './ButtonContainer.scss';
+import './ButtonContainer.css';
 
 const ButtonContainer = ({ modalButtons }) => (
     <>

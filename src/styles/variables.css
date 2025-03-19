@@ -1,0 +1,16 @@
+:root {
+  /* Font weights */
+  --extra-light: 200;
+  --medium: 500;
+  --bold: 700;
+  --black: 900;
+
+  /* Colors */
+  --black-transparent: #00000036;
+  --lighter-grey: #f4f5f7;
+  --light-grey: #dfe1e6;
+  --grey: #818181;
+  --grey-fade: #818181ad;
+  --dark-grey: #505e74;
+  --white: #fafafa;
+} 
