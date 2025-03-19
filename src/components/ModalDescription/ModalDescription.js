@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAlignLeft } from '@fortawesome/free-solid-svg-icons';
 import Button, {BUTTON_TYPES} from 'components/Button/Button';
 import { ModalContextConsumer } from 'components/Contexts/ModalContext';
-import './ModalDescription.scss';
+import './ModalDescription.css';
 
 class ModalDescription extends Component {
     render() {

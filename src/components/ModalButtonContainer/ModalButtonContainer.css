@@ -1,0 +1,10 @@
+.modal-button-container {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  & .square-button {
+    margin: 10px;
+  }
+} 

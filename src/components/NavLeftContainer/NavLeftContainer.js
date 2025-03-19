@@ -2,7 +2,7 @@ import React from 'react';
 import NavInput from 'components/NavInput/NavInput';
 import Button, {BUTTON_TYPES} from 'components/Button/Button';
 import { faHome, faBorderAll} from '@fortawesome/free-solid-svg-icons';
-import './NavLeftContainer.scss';
+import './NavLeftContainer.css';
 
 const NavLeftContainer = () => (
     <div className='nav-container'>

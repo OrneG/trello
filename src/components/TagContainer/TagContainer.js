@@ -3,7 +3,7 @@ import tags from 'tags';
 import Tag, { TAG_TYPES } from 'components/Tag/Tag';
 import CloseButton from 'components/CloseButton/CloseButton';
 import { TagPanelContextConsumer } from 'components/Contexts/TagPanelContext';
-import './TagContainer.scss';
+import './TagContainer.css';
 
 class TagContainer extends Component {
     render() {

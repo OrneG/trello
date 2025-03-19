@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faComment } from '@fortawesome/free-regular-svg-icons';
 import Comment from 'components/Comment/Comment';
 import Button, { BUTTON_TYPES } from 'components/Button/Button';
-import './ModalComents.scss';
+import './ModalComents.css';
 import { ModalContextConsumer } from 'components/Contexts/ModalContext';
 
 class ModalComents extends Component {

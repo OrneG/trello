@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ModalDescription from 'components/ModalDescription/ModalDescription';
 import ModalComents from 'components/ModalComents/ModalComents';
-import './ModalContainer.scss';
+import './ModalContainer.css';
 
 class ModalContainer extends Component {
   render() {

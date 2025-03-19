@@ -1,7 +1,7 @@
 import React from 'react';
 import BoardHeaderRightContainer from 'components/BoardHeader/BoardHeaderRightContainer/BoardHeaderRightContainer';
 import BoardHeaderLeftContainer from 'components/BoardHeader/BoardHeaderLeftContainer/BoardHeaderLeftContainer';
-import './BoardHeader.scss';
+import './BoardHeader.css';
 
 const BoardHeader = () => (
     <div className='board-header'>

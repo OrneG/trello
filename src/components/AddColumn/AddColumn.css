@@ -1,0 +1,23 @@
+.add-column {
+  width: 250px;
+  height: 75px;
+  border-radius: 5px;
+  background-color: var(--light-grey);
+  padding: 5px;
+  margin: 6px;
+  color: #637188;
+  font-weight: var(--bold);
+
+  & .input {
+    margin-left: 4px;
+    padding: 0px 5px;
+  }
+
+  & .green-button {
+    margin: 5px;
+  }
+}
+
+.add-column-buttons {
+  display: flex;
+} 

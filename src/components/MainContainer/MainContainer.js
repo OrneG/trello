@@ -6,7 +6,7 @@ import TagPanelContextProvider from 'components/Contexts/TagPanelContext';
 import TagContainer from 'components/TagContainer/TagContainer';
 import ModalContextProvider from 'components/Contexts/ModalContext';
 import Modal from 'components/Modal/Modal';
-import './MainContainer.scss';
+import './MainContainer.css';
 
 class MainContainer extends Component {
   render() {

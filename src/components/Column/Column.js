@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import Card from 'components/Card/Card';
 import uuid from 'uuid/v4';
 import AddCard from 'components/AddCard/AddCard';
-import './Column.scss';
-import 'components/AddCard/AddCard.scss'
+import './Column.css';
+import 'components/AddCard/AddCard.css';
 
 class Column extends Component {
     state = {

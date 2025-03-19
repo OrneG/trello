@@ -1,0 +1,22 @@
+.modal-description {
+  height: 200px;
+  width: 100%;
+
+  & textarea {
+    background-color: var(--light-grey);
+  }
+
+  & .icon {
+    top: 16px;
+  }
+
+  & .green-button {
+    margin-left: 40px;
+  }
+}
+
+.icon {
+  position: absolute;
+  left: 15px;
+  height: 16px;
+} 

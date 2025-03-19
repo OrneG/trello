@@ -1,0 +1,22 @@
+.tag-small {
+  height: 15px;
+}
+
+.tag-big {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  width: 86%;
+
+  &:hover {
+    border-left: rgba(0, 0, 0, 0.219) 6px solid;
+  }
+}
+
+.tag-big, .tag-small {
+  margin: 5px;
+  border-radius: 5px;
+  color: white;
+  padding: 0 10px;
+  font-weight: bold;
+} 

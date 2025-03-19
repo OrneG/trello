@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Button, { BUTTON_TYPES } from 'components/Button/Button';
 import { faEllipsisH } from '@fortawesome/free-solid-svg-icons';
 import { TagPanelContextConsumer } from 'components/Contexts/TagPanelContext';
-import './BoardHeaderRightContainer.scss';
+import './BoardHeaderRightContainer.css';
 
 class BoardHeaderRightContainer extends Component {
     render() {

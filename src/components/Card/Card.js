@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Tag, { TAG_TYPES } from 'components/Tag/Tag';
 import { ModalContextConsumer } from 'components/Contexts/ModalContext';
-import './Card.scss';
+import './Card.css';
 
 class Card extends Component {
     render() {

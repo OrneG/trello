@@ -1,5 +1,5 @@
 import React from 'react';
-import './Tag.scss';
+import './Tag.css';
 
 export const TAG_TYPES = {
     SMALL: 'tag-small',

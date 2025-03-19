@@ -1,0 +1,29 @@
+.modal-coments {
+  height: 200px;
+  width: 100%;
+
+  & textarea {
+    background-color: var(--white);
+  }
+
+  & .icon {
+    top: 227px;
+  }
+
+  & .green-button {
+    margin-left: 40px;
+  }
+}
+
+.h2 {
+  margin: 10px 20px 10px 40px;
+  font-size: 20px;
+  color: var(--dark-grey);
+}
+
+.textarea {
+  width: 420px;
+  height: 80px;
+  margin: 10px 20px 10px 40px;
+  padding: 10px;
+} 

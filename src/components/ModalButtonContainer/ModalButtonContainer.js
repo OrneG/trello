@@ -3,7 +3,7 @@ import ButtonContainer from 'components/ButtonContainer/ButtonContainer';
 import modalButtons from 'modalButtons';
 import CloseButton from 'components/CloseButton/CloseButton';
 import { ModalContextConsumer } from 'components/Contexts/ModalContext';
-import './ModalButtonContainer.scss';
+import './ModalButtonContainer.css';
 
 class ModalButtonContainer extends Component {
     render() {

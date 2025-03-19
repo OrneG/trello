@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import './Button.scss';
+import './Button.css';
 
 export const BUTTON_TYPES = {
     SQUARE: 'square-button',
