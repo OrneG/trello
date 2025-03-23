@@ -1,17 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ModalDescription from 'components/ModalDescription/ModalDescription';
 import ModalComents from 'components/ModalComents/ModalComents';
 import './ModalContainer.css';
 
-class ModalContainer extends Component {
-  render() {
+export default function ModalContainer() {
     return (
-      <div className='modal-container'>
-        <ModalDescription></ModalDescription>
-        <ModalComents></ModalComents>
-      </div>
-    )
-  }
+        <div className='modal-container'>
+            <ModalDescription />
+            <ModalComents />
+        </div>
+    );
 }
-
-export default ModalContainer;

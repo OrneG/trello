@@ -4,12 +4,12 @@ import Button, {BUTTON_TYPES} from 'components/Button/Button';
 import { faHome, faBorderAll} from '@fortawesome/free-solid-svg-icons';
 import './NavLeftContainer.css';
 
-const NavLeftContainer = () => (
-    <div className='nav-container'>
-        <Button classType={BUTTON_TYPES.SQUARE} icon={faHome}></Button>
-        <Button text='Boards' classType={BUTTON_TYPES.LARGER} icon={faBorderAll}></Button>
-        <NavInput></NavInput>
-    </div>
-)
-
-export default NavLeftContainer;
+export default function NavLeftContainer() {
+    return (
+        <div className='nav-container'>
+            <Button classType={BUTTON_TYPES.SQUARE} icon={faHome}></Button>
+            <Button text='Boards' classType={BUTTON_TYPES.LARGER} icon={faBorderAll}></Button>
+            <NavInput></NavInput>
+        </div>
+    );
+}

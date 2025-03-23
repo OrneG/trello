@@ -1,4 +1,4 @@
-import uuid from 'uuid/v4';
+import { v4 as uuid } from 'uuid';
 import { faUser, faCheckSquare, faClock } from '@fortawesome/free-regular-svg-icons';
 import { faTag, faPaperclip } from '@fortawesome/free-solid-svg-icons';
 
