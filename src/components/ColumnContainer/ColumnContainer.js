@@ -1,46 +1,36 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import Column from 'components/Column/Column';
 // import columns from 'columns';
 import AddColumn from 'components/AddColumn/AddColumn';
-import uuid from 'uuid/v4';
+import { v4 as uuid } from 'uuid';
 import './ColumnContainer.css';
 import 'components/AddColumn/AddColumn.css'
 
-class ColumnContainer extends Component {
-    state = {
-        visible: false,
-        columnName: '',
-        columns: []
+export default function ColumnContainer() {
+    const [columnName, setColumnName] = useState('');
+    const [columns, setColumns] = useState([]);
+
+    const addColumnName = evento => {
+        setColumnName(evento.target.value);
     }
-    toggle = () => {
-        this.setState({ visible: !this.state.visible })
-    }
-    addColumnName = evento => {
-        this.setState({ columnName: evento.target.value })
-    }
-    addNewColumn = () => {
+
+    const addNewColumn = () => {
         const newColumn = {
             id: uuid(),
-            title: this.state.columnName,
+            title: columnName,
             cards: []
-        }
-        const columns = this.state.columns.slice();
-        columns.push(newColumn)
-        this.setState({ columnName: '', columns: columns })
+        };
+        setColumns([...columns, newColumn]);
+        setColumnName('');
     }
-    render() {
-        return (
-            <div className='column-container'>
-                {
-                    this.state.columns.map(column => <Column key={column.id} title={column.title} cards={column.cards} />)
-                }
-                <AddColumn onChange={this.addColumnName}
-                    value={this.state.columnName}
-                    onClick={this.addNewColumn}
-                ></AddColumn>
-            </div>
-        )
-    }
-}
 
-export default ColumnContainer;
+    return (
+        <div className='column-container'>
+            {columns.map(column => <Column key={column.id} title={column.title} cards={column.cards} />)}
+            <AddColumn onChange={addColumnName}
+                value={columnName}
+                onClick={addNewColumn}
+            ></AddColumn>
+        </div>
+    );
+}

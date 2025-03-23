@@ -11,15 +11,15 @@ export const BUTTON_TYPES = {
     COLUMN: 'column-button'
 }
 
-const Button = ({ classType, text, icon }) => (
-    <div className={classType}>
-        <FontAwesomeIcon
-            icon={icon}
-            className= 'awesome-icon'
-            style={{ display: icon ? 'inline-block' : 'block' }}>
-        </FontAwesomeIcon>
-        {text}
-    </div>
-)
-
-export default Button;
+export default function Button({ classType, text, icon }) {
+    return (
+        <div className={classType}>
+            <FontAwesomeIcon
+                icon={icon}
+                className='awesome-icon'
+                style={{ display: icon ? 'inline-block' : 'block' }}
+            />
+            {text}
+        </div>
+    );
+}

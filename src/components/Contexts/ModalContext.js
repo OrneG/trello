@@ -1,62 +1,61 @@
-import React, {Component} from 'react';
-import uuid from 'uuid/v4';
+import React, { useState } from 'react';
+import { v4 as uuid } from 'uuid';
 
 const ModalContext = React.createContext();
 
-class ModalContextProvider extends Component {
-    state = {
-        modalVisible: false,
-        description: '',
-        comment: '',
-        comments: [],
-        cards: []
+export default function ModalContextProvider({ children }) {
+    const [modalVisible, setModalVisible] = useState(false);
+    const [description, setDescription] = useState('');
+    const [comment, setComment] = useState('');
+    const [comments, setComments] = useState([]);
+    const [cards, setCards] = useState([]);
+
+    const toggleModal = () => {
+        setModalVisible(!modalVisible);
     }
-    toggleModal = () => {
-        this.setState({ modalVisible: !this.state.modalVisible })
+
+    const addNewDescription = event => {
+        setDescription(event.target.value);
     }
-    addNewDescription = event => {
-        this.setState({ description: event.target.value })
+
+    const addNewComment = event => {
+        setComment(event.target.value);
     }
-    addNewComment = event => {
-        this.setState({ comment: event.target.value })
-    }
-    addComment = () => {
+
+    const addComment = () => {
         const newComment = {
             id: uuid(),
-            text: this.state.comment,
+            text: comment,
         }
-        const comments = this.state.comments.slice();
-        comments.push(newComment)
-        this.setState({ comment: '', comments: comments})
+        setComments([...comments, newComment]);
+        setComment('');
     }
-    addCardDescription = () => {
+
+    const addCardDescription = () => {
         const newDescription = {
             id: uuid(),
-            text: this.state.description,
+            text: description,
         }
-        const cards = this.state.cards.slice();
-        cards.push(newDescription)
-        this.setState({ description: '', cards: cards})
+        setCards([...cards, newDescription]);
+        setDescription('');
     }
-    render() {
-        return (
-            <ModalContext.Provider
-            value = {{
-                modalVisible: this.state.modalVisible,
-                description: this.description,
-                comment: this.state.comment,
-                comments: this.state.comments,
-                toggleModal: this.toggleModal,
-                addCardDescription: this.addCardDescription,
-                addNewDescription: this.addNewDescription,
-                addNewComment: this.addNewComment,
-                addComment: this.addComment
+
+    return (
+        <ModalContext.Provider
+            value={{
+                modalVisible,
+                description,
+                comment,
+                comments,
+                toggleModal,
+                addCardDescription,
+                addNewDescription,
+                addNewComment,
+                addComment
             }}>
-                {this.props.children}
-            </ModalContext.Provider>
-        )
-    }
+            {children}
+        </ModalContext.Provider>
+    );
 }
 
-export const ModalContextConsumer = ModalContext.Consumer
-export default ModalContextProvider;
+export const ModalContextConsumer = ModalContext.Consumer;
