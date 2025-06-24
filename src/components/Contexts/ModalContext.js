@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { v4 as uuid } from 'uuid';
 
 const ModalContext = React.createContext();
 
@@ -24,7 +23,6 @@ export default function ModalContextProvider({ children }) {
 
     const addComment = () => {
         const newComment = {
-            id: uuid(),
             text: comment,
         }
         setComments([...comments, newComment]);
@@ -33,7 +31,6 @@ export default function ModalContextProvider({ children }) {
 
     const addCardDescription = () => {
         const newDescription = {
-            id: uuid(),
             text: description,
         }
         setCards([...cards, newDescription]);
