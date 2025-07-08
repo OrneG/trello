@@ -3,7 +3,7 @@ import Button, { BUTTON_TYPES } from 'components/Button/Button';
 import { faPlus, faTimes } from '@fortawesome/free-solid-svg-icons';
 import './AddCard.css';
 
-export default function AddCard({ onChange, onClick, value }) {
+export default function AddCard({ onChange, value, onClick, onKeyDown }) {
     const [visible, setVisible] = useState(false);
 
     const toggle = () => {
@@ -13,7 +13,6 @@ export default function AddCard({ onChange, onClick, value }) {
     return (
         <div className='add-card'>
             <div 
-                className='add-card-form'
                 style={{
                     display: visible ? 'block' : 'none'
                 }}
@@ -22,10 +21,11 @@ export default function AddCard({ onChange, onClick, value }) {
                     placeholder='Ingrese un título para esta tarjeta...'
                     onChange={onChange}
                     value={value}
+                    onKeyDown={onKeyDown}
                 />
                 <div className='add-card-buttons'>
                     <div onClick={onClick}>
-                        <Button classType={BUTTON_TYPES.GREEN} text='Add card'></Button>
+                        <Button classType={BUTTON_TYPES.GREEN} text='Agregar'></Button>
                     </div>
                     <div onClick={toggle}>
                         <Button classType={BUTTON_TYPES.SQUARE} icon={faTimes}></Button>

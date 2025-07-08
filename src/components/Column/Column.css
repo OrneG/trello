@@ -1,18 +1,23 @@
 .column {
   width: 250px;
-  border-radius: 5px;
+  border-radius: 4px;
   background-color: var(--light-grey);
-  padding: 5px;
-  margin: 6px;
+  padding: 8px;
+  margin: 8px;
   color: var(--dark-grey);
   font-weight: var(--medium);
+
 }
 
-.column-p {
-  font-size: 15px;
-  margin-left: 16px;
+.column-title {
+  font-size: 1rem;
+  margin: 8px 0 16px 8px;
+}
+
+.input:focus {
+  outline: none;  
 }
 
 p {
-  margin: 0;
-} 
+  margin: 8px;
+}

@@ -28,6 +28,7 @@ export default function ColumnContainer() {
             <AddColumn onChange={(event) => setColumnTitle(event.target.value)}
                 value={columnTitle}
                 onClick={addNewColumn}
+                onKeyDown={(e) => {if (e.key === 'Enter') addNewColumn();}}
             ></AddColumn>
         </div>
     );

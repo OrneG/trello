@@ -6,10 +6,13 @@ import './Card.css';
 export default function Card({ tags, title, text }) {
     return (
         <ModalContextConsumer>
-            {({ toggleModal }) => (
+            {({ toggleModal, setSelectedCard }) => (
                 <>
                     <div className='card'
-                        onClick={toggleModal}>
+                        onClick={() => {
+                            setSelectedCard({ title, text, tags });
+                            toggleModal();
+                        }}>
                         <div className='tags'>
                             {tags.map(tag => <Tag
                                 key={tag.id}

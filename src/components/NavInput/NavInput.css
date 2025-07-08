@@ -3,18 +3,16 @@
   border-radius: 5px;
   width: 160px;
   height: 28px;
-  margin: 5px 2.5px;
   cursor: pointer;
   border: none;
 
-  &:focus {
+  &:hover, &:focus {
     outline: none;
+    background-color: var(--grey);
   }
 }
 
-.svg-inline--fa.fa-search.fa-w-16 {
-  color: var(--white);
-  position: absolute;
-  top: 12px;
-  left: 260px;
-} 
+.icon {
+  color: var(--grey-fade);
+  margin-left: 4px;
+}

@@ -10,12 +10,12 @@ export default function Column({ title: initialTitle }) {
     const [isEditing, setIsEditing] = useState(false);
     const [editedTitle, setEditedTitle] = useState(initialTitle);
 
-    const agregarTarjeta = () => {
-        const nuevaTarjeta = {
+    const addCard = () => {
+        const newCard = {
             title: cardName,
             tags: []
         };
-        setCards([...cards, nuevaTarjeta]);
+        setCards([...cards, newCard]);
         setCardName('');
     }
 
@@ -38,7 +38,7 @@ export default function Column({ title: initialTitle }) {
                 />
             ) : (
                 <p
-                    className='column-p'
+                    className='column-title'
                     onDoubleClick={() => setIsEditing(true)}
                     style={{ cursor: 'pointer' }}
                 >
@@ -52,7 +52,8 @@ export default function Column({ title: initialTitle }) {
                 tags={card.tags} />)}
             <AddCard onChange={(event) => setCardName(event.target.value)}
                 value={cardName}
-                onClick={agregarTarjeta}>
+                onClick={addCard}
+                onKeyDown={(e) => {if (e.key === 'Enter') addCard();}}>
             </AddCard>
         </div>
     );

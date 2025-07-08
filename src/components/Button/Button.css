@@ -31,6 +31,12 @@
   }
 }
 
+.square-button, .larger-button {
+  &:hover {
+    background-color: var(--grey);
+  }
+}
+
 .green-button {
   margin: 5px 5px 5px 0;
   color: var(--white);
@@ -41,11 +47,11 @@
   border-radius: 5px;
   height: 20px;
   width: 80px;
-  background-color: #5aac44;
+  background-color: var(--green);
   padding: 5px;
 
   &:hover {
-    background-color: #4c863c;
+    background-color: var(--dark-green);
   }
 }
 

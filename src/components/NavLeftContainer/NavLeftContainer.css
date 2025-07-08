@@ -1,4 +1,7 @@
 .nav-container {
   display: flex;
+  gap: 4px;
+  padding: 8px;
   height: 100%;
+  align-items: center;
 } 

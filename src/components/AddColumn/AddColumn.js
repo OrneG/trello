@@ -3,7 +3,7 @@ import Button, { BUTTON_TYPES } from 'components/Button/Button';
 import { faPlus, faTimes } from '@fortawesome/free-solid-svg-icons';
 import './AddColumn.css';
 
-export default function AddColumn({ onChange, onClick, value }) {
+export default function AddColumn({ onChange, onClick, onKeyDown, value }) {
     const [visible, setVisible] = useState(false);
 
     const toggle = () => {
@@ -20,6 +20,7 @@ export default function AddColumn({ onChange, onClick, value }) {
                     type='text'
                     placeholder='Ingrese el título de la lista...'
                     onChange={onChange}
+                    onKeyDown={onKeyDown}
                     value={value}></input>
                 <div className='add-column-buttons'>
                     <div onClick={onClick}>

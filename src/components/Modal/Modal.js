@@ -7,11 +7,14 @@ import './Modal.css';
 export default function Modal() {
     return (
         <ModalContextConsumer>
-            {({ modalVisible }) => (
+            {({ modalVisible, selectedCard }) => (
                 modalVisible && (
                     <div className='modal'>
-                        <ModalContainer></ModalContainer>
-                        <ModalButtonContainer></ModalButtonContainer>
+                        <section className='modal-content'>
+                            <h2 className='card-title'>{selectedCard ? selectedCard.title : ''}</h2>
+                            <ModalContainer/>
+                        </section>
+                        <ModalButtonContainer/>
                     </div>
                 )
             )}

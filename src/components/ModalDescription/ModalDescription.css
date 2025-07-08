@@ -16,7 +16,6 @@
 }
 
 .icon {
-  position: absolute;
-  left: 15px;
   height: 16px;
+  margin-right: 8px;
 } 

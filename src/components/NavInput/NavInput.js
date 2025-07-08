@@ -7,7 +7,7 @@ export default function NavInput() {
     return (
         <>
             <input type='text' className='nav-input' />
-            <FontAwesomeIcon icon={faSearch}></FontAwesomeIcon>
+            <FontAwesomeIcon icon={faSearch} className='icon'></FontAwesomeIcon>
         </>
     );
 }
