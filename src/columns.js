@@ -6,7 +6,7 @@ const columns = [
         cards: [
             {
                 title: 'Terminar el proyecto',
-                text: 'asdasd',
+                text: '',
                 tags: [
                     {
                         name: 'Funcional',
@@ -24,7 +24,7 @@ const columns = [
             },
             {
                 title: 'Practicar React',
-                text: 'asdasdasdasd',
+                text: '',
                 tags: [
                     {
                         name: 'Desarrollo',
@@ -34,7 +34,7 @@ const columns = [
             },
             {
                 title: 'Mejorar el aspecto del trello',
-                text: 'asdasdasdasd',
+                text: '',
                 tags: [
                     {
                         name: 'Maquetado',
@@ -48,37 +48,12 @@ const columns = [
             }
         ]
     },
-    // {
-    //     title: 'Procesando',
-    //     cards: [
-    //         {
-    //             title: 'Entender React',
-    //             text: 'asdasd',
-    //             tags: [
-    //                 {
-    //                     name: 'Desarrollo',
-    //                     color: '#0079bf'
-    //                 }
-    //             ]
-    //         },
-    //         {
-    //             title: 'Tomarlo con calma',
-    //             text: 'asdasdasdasd',
-    //             tags: [
-    //                 {
-    //                     name: 'Bugs',
-    //                     color: '#e53935'
-    //                 }
-    //             ]
-    //         }
-    //     ]
-    // },
     {
         title: 'Listos',
         cards: [
             {
                 title: 'Hacer ejercicios',
-                text: 'asdasd',
+                text: '',
                 tags: [
                     {
                         name: 'Funcional',
@@ -92,7 +67,7 @@ const columns = [
             },
             {
                 title: 'Hacer componentes con map',
-                text: 'asdasdasdasd',
+                text: '',
                 tags: [
                     {
                         name: 'Funcional',

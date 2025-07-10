@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
+import initialColumns from 'columns';
 
-const ModalContext = React.createContext();
+export const ModalContext = React.createContext();
 
 export default function ModalContextProvider({ children }) {
     const [modalVisible, setModalVisible] = useState(false);
     const [description, setDescription] = useState('');
     const [comment, setComment] = useState('');
     const [comments, setComments] = useState([]);
-    const [cards, setCards] = useState([]);
-    const [selectedCard, setSelectedCard] = useState(null);
+    const [columns, setColumns] = useState(initialColumns);
+    const [selectedCard, setSelectedCard] = useState(null); // Will hold { columnIndex, cardIndex }
 
     const toggleModal = () => {
         setModalVisible(!modalVisible);
@@ -30,13 +31,19 @@ export default function ModalContextProvider({ children }) {
         setComment('');
     }
 
-    const addCardDescription = () => {
-        const newDescription = {
-            text: description,
-        }
-        setCards([...cards, newDescription]);
-        setDescription('');
-    }
+    const updateCardDescription = (desc) => {
+        if (!selectedCard) return;
+        const { columnIndex, cardIndex } = selectedCard;
+        setColumns(prevColumns => prevColumns.map((col, ci) => {
+            if (ci !== columnIndex) return col;
+            return {
+                ...col,
+                cards: col.cards.map((card, caIdx) =>
+                    caIdx === cardIndex ? { ...card, text: desc } : card
+                )
+            };
+        }));
+    };
 
     return (
         <ModalContext.Provider
@@ -45,13 +52,15 @@ export default function ModalContextProvider({ children }) {
                 description,
                 comment,
                 comments,
+                columns,
+                setColumns,
                 toggleModal,
-                addCardDescription,
                 addNewDescription,
                 addNewComment,
                 addComment,
                 selectedCard,
-                setSelectedCard
+                setSelectedCard,
+                updateCardDescription
             }}>
             {children}
         </ModalContext.Provider>

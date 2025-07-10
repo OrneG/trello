@@ -24,7 +24,7 @@ export default function AddColumn({ onChange, onClick, onKeyDown, value }) {
                     value={value}></input>
                 <div className='add-column-buttons'>
                     <div onClick={onClick}>
-                        <Button classType={BUTTON_TYPES.GREEN} text='Agregar'></Button>
+                        <Button classType={BUTTON_TYPES.GREEN} text='Add'></Button>
                     </div>
                     <div onClick={toggle}>
                         <Button classType={BUTTON_TYPES.SQUARE} icon={faTimes}></Button>
@@ -34,7 +34,7 @@ export default function AddColumn({ onChange, onClick, onKeyDown, value }) {
             <div>
                 {!visible && (
                     <div onClick={toggle}>
-                        <Button classType={BUTTON_TYPES.COLUMN} text='Agregar columna' icon={faPlus}></Button>
+                        <Button classType={BUTTON_TYPES.COLUMN} text='Add Column' icon={faPlus}></Button>
                     </div>
                 )}
             </div>

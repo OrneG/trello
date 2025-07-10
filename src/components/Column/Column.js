@@ -4,18 +4,13 @@ import AddCard from 'components/AddCard/AddCard';
 import './Column.css';
 import 'components/AddCard/AddCard.css';
 
-export default function Column({ title: initialTitle }) {
+export default function Column({ title: initialTitle, cards, columnIndex }) {
     const [cardName, setCardName] = useState('');
-    const [cards, setCards] = useState([]);
     const [isEditing, setIsEditing] = useState(false);
     const [editedTitle, setEditedTitle] = useState(initialTitle);
 
+
     const addCard = () => {
-        const newCard = {
-            title: cardName,
-            tags: []
-        };
-        setCards([...cards, newCard]);
         setCardName('');
     }
 
@@ -45,11 +40,14 @@ export default function Column({ title: initialTitle }) {
                     {editedTitle}
                 </p>
             )}
-            {cards.map(card => <Card
+            {cards.map((card, cardIndex) => <Card
                 key={card.title}
                 title={card.title}
                 text={card.text}
-                tags={card.tags} />)}
+                tags={card.tags}
+                columnIndex={columnIndex}
+                cardIndex={cardIndex}
+            />)}
             <AddCard onChange={(event) => setCardName(event.target.value)}
                 value={cardName}
                 onClick={addCard}

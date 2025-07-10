@@ -25,7 +25,7 @@ export default function AddCard({ onChange, value, onClick, onKeyDown }) {
                 />
                 <div className='add-card-buttons'>
                     <div onClick={onClick}>
-                        <Button classType={BUTTON_TYPES.GREEN} text='Agregar'></Button>
+                        <Button classType={BUTTON_TYPES.GREEN} text='Add'></Button>
                     </div>
                     <div onClick={toggle}>
                         <Button classType={BUTTON_TYPES.SQUARE} icon={faTimes}></Button>
@@ -34,7 +34,7 @@ export default function AddCard({ onChange, value, onClick, onKeyDown }) {
             </div>
             {!visible && (
                 <div onClick={toggle}>
-                    <Button classType={BUTTON_TYPES.TRANSPARENT} text='Agregar tarjeta' icon={faPlus}></Button>
+                    <Button classType={BUTTON_TYPES.TRANSPARENT} text='Add Card' icon={faPlus}></Button>
                 </div>
             )}
         </div>

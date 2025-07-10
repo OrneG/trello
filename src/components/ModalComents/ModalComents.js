@@ -19,7 +19,7 @@ export default function ModalComents() {
                         comment={comment}
                         onChange={addNewComment}></textarea>
                     <div onClick={addComment}>
-                        <Button classType={BUTTON_TYPES.GREEN} text='Guardar'></Button>
+                        <Button classType={BUTTON_TYPES.GREEN} text='Save'></Button>
                     </div>
                     {comments.map(comment => <Comment key={comment.id} username='OrneG' text={comment.text} />)}
                 </div>

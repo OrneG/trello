@@ -3,14 +3,14 @@ import Tag, { TAG_TYPES } from 'components/Tag/Tag';
 import { ModalContextConsumer } from 'components/Contexts/ModalContext';
 import './Card.css';
 
-export default function Card({ tags, title, text }) {
+export default function Card({ tags, title, text, columnIndex, cardIndex }) {
     return (
         <ModalContextConsumer>
             {({ toggleModal, setSelectedCard }) => (
                 <>
                     <div className='card'
                         onClick={() => {
-                            setSelectedCard({ title, text, tags });
+                            setSelectedCard({ columnIndex, cardIndex });
                             toggleModal();
                         }}>
                         <div className='tags'>
