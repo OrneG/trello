@@ -2,7 +2,7 @@
 
 const columns = [
     {
-        title: 'Para hacer',
+        title: 'To do',
         cards: [
             {
                 title: 'Terminar el proyecto',
@@ -43,43 +43,6 @@ const columns = [
                     {
                         name: 'Diseño',
                         color: '#dfc534'
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        title: 'Listos',
-        cards: [
-            {
-                title: 'Hacer ejercicios',
-                text: '',
-                tags: [
-                    {
-                        name: 'Funcional',
-                        color: '#ff8718'
-                    },
-                    {
-                        name: 'Maquetado',
-                        color: '#03882c'
-                    }
-                ]
-            },
-            {
-                title: 'Hacer componentes con map',
-                text: '',
-                tags: [
-                    {
-                        name: 'Funcional',
-                        color: '#ff8718'
-                    },
-                    {
-                        name: 'Maquetado',
-                        color: '#03882c'
-                    },
-                    {
-                        name: 'Desarrollo',
-                        color: '#0079bf'
                     }
                 ]
             }

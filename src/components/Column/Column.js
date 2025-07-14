@@ -4,13 +4,19 @@ import AddCard from 'components/AddCard/AddCard';
 import './Column.css';
 import 'components/AddCard/AddCard.css';
 
-export default function Column({ title: initialTitle, cards, columnIndex }) {
+export default function Column({ title: initialTitle, cards, columnIndex, addCardToColumn }) {
     const [cardName, setCardName] = useState('');
     const [isEditing, setIsEditing] = useState(false);
     const [editedTitle, setEditedTitle] = useState(initialTitle);
 
-
+    // Update addCard to actually add the card
     const addCard = () => {
+        if (cardName.trim() === '') return;
+        addCardToColumn(columnIndex, {
+            title: cardName,
+            text: '',
+            tags: []
+        });
         setCardName('');
     }
 

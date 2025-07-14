@@ -1,12 +1,15 @@
 .small-tag {
-  height: 15px;
+  height: 16px;
+  padding: 4px 8px;
 }
 
 .big-tag {
   display: flex;
   align-items: center;
   height: 40px;
-  width: 86%;
+  width: 88%;
+  padding: 0 10px;
+  margin: 4px;
 
   &:hover {
     border-left: rgba(0, 0, 0, 0.219) 6px solid;
@@ -14,9 +17,7 @@
 }
 
 .big-tag, .small-tag {
-  margin: 5px;
-  border-radius: 5px;
-  color: white;
-  padding: 0 10px;
+  border-radius: 8px;
+  color: var(--lighter-grey);
   font-weight: bold;
-} 
+}

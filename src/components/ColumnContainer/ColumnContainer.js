@@ -18,6 +18,16 @@ export default function ColumnContainer() {
                     setColumns([...columns, newColumn]);
                     setColumnTitle('');
                 };
+                // Add this function to add a card to a specific column
+                const addCardToColumn = (columnIndex, card) => {
+                    setColumns(columns => columns.map((col, idx) => {
+                        if (idx !== columnIndex) return col;
+                        return {
+                            ...col,
+                            cards: [...col.cards, card]
+                        };
+                    }));
+                };
                 return (
                     <div className='column-container'>
                         {columns.map((column, columnIndex) =>
@@ -26,6 +36,7 @@ export default function ColumnContainer() {
                                 title={column.title}
                                 cards={column.cards}
                                 columnIndex={columnIndex}
+                                addCardToColumn={addCardToColumn}
                             />)}
                         <AddColumn onChange={(event) => setColumnTitle(event.target.value)}
                             value={columnTitle}
