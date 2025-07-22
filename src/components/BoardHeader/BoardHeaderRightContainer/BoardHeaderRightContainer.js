@@ -10,7 +10,7 @@ export default function BoardHeaderRightContainer() {
             <TagPanelContextConsumer>
                 {({ openTagContainer }) => (
                     <div onClick={openTagContainer}>
-                        <Button text='Show menu' classType={BUTTON_TYPES.TRANSPARENT}
+                        <Button text='Show tags' classType={BUTTON_TYPES.TRANSPARENT}
                         icon={faEllipsisH} ></Button>
                     </div>
                 )}

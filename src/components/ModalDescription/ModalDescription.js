@@ -63,7 +63,7 @@ export default function ModalDescription() {
                 </>
             ) : (
                 <div
-                    className='description-view'
+                    className='description-text'
                     onClick={handleEdit}
                     style={{ whiteSpace: 'pre-wrap', cursor: 'pointer' }}
                 >

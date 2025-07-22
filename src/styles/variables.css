@@ -1,9 +1,8 @@
 :root {
   /* Font weights */
-  --extra-light: 200;
+  --light:400;
   --medium: 500;
   --bold: 700;
-  --black: 900;
 
   /* Colors */
   --black-transparent: #00000036;

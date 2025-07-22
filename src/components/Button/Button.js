@@ -11,15 +11,30 @@ export const BUTTON_TYPES = {
     COLUMN: 'column-button'
 }
 
-export default function Button({ classType, text, icon }) {
-    return (
-        <div className={classType}>
-            <FontAwesomeIcon
-                icon={icon}
-                className='awesome-icon'
-                style={{ display: icon ? 'inline-block' : 'block' }}
-            />
+export default function Button({ classType, text, icon, popover = false }) {
+
+    const ButtonContent = (
+        <>
+            {icon && (
+                <FontAwesomeIcon
+                    icon={icon}
+                    className='awesome-icon'
+                    style={{ display: 'inline-block' }}
+                />
+            )}
             {text}
-        </div>
+        </>
+    );
+
+    return (
+        popover ? (
+            <button className={classType} popoverTarget='add-tag'>
+                {ButtonContent}
+            </button>
+        ) : (
+            <div className={classType}>
+                {ButtonContent}
+            </div>
+        )
     );
 }

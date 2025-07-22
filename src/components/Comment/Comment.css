@@ -14,7 +14,6 @@
     background-color: #fff;
     border-radius: 3px;
     box-shadow: 0 1px 2px -1px rgba(9,30,66,.25), 0 0 0 1px rgba(9,30,66,.08);
-    box-sizing: border-box;
     clear: both;
     display: inline-block;
     margin: 4px 2px 4px 0;
@@ -26,15 +25,15 @@
 
   & .comment-actions {
     display: flex;
+  }
 
-    & .comment-action {
-      font-size: 0.7rem;
-      margin: 0 5px;
-      color: var(--grey);
+  & .comment-action {
+    font-size: 0.7rem;
+    margin: 0 5px;
+    color: var(--grey);
 
-      &:visited {
-        color: inherit;
-      }
+    &:visited {
+      color: inherit;
     }
   }
 } 

@@ -1,10 +1,34 @@
 .button-container {
   height: 50%;
   width: 100%;
+
+& div[text="Labels"] {
+    anchor-name: --labels;
+  }
 }
 
 .h3 {
   margin-left: 5px;
   font-size: 0.8rem;
   color: var(--grey);
-} 
+}
+
+dialog {
+  position-anchor: --labels;
+  position: fixed;
+  width: 160px;
+  gap: 8px;
+  text-align: left;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0px 0px 8px var(--dark-grey);
+
+  &:popover-open {
+    opacity: 1;
+
+    @starting-style {
+        opacity: 0;
+    }
+}
+}

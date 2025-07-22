@@ -18,4 +18,10 @@
 .icon {
   height: 16px;
   margin-right: 8px;
-} 
+}
+
+.description-text {
+  margin-left: 44px;
+  font-size: 1rem;
+  color: var(--dark-grey);
+}

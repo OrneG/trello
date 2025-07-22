@@ -8,9 +8,18 @@ export default function Modal() {
     return (
         <ModalContextConsumer>
             {({ modalVisible, selectedCard, columns }) => {
-                let cardTitle = columns[selectedCard.columnIndex].cards[selectedCard.cardIndex].title
+                let cardTitle = '';
+                if (
+                    selectedCard &&
+                    columns &&
+                    columns[selectedCard.columnIndex] &&
+                    columns[selectedCard.columnIndex].cards &&
+                    columns[selectedCard.columnIndex].cards[selectedCard.cardIndex]
+                ) {
+                    cardTitle = columns[selectedCard.columnIndex].cards[selectedCard.cardIndex].title;
+                }
                 return (
-                    modalVisible && (
+                    modalVisible && cardTitle && (
                         <div className='modal'>
                             <section className='modal-content'>
                                 <h2 className='card-title'>{cardTitle}</h2>

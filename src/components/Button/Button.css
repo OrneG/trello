@@ -1,12 +1,35 @@
-.square-button {
+.square-button, .larger-button, .green-button, .modal-button, .transparent-button, .column-button {
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.square-button, .larger-button, .modal-button, .transparent-button, .column-button {
   display: flex;
-  justify-content: center;
   align-items: center;
+}
+
+.larger-button, .modal-button, .transparent-button, .column-button {
+  margin: 4px;
+}
+.square-button, .larger-button, .transparent-button {
+  height: 28px;
+}
+
+.square-button, .larger-button {
+  justify-content: center;
+}
+
+.column-button, .transparent-button {
+  justify-content: flex-start;
+}
+
+button {
+  border: none;
+}
+
+.square-button {
   background: var(--grey-fade);
-  border-radius: 5px;
-  width: 30px;
-  height: 30px;
-  margin: 5px 2.5px;
+  width: 28px;
   color: var(--white);
 
   & i {
@@ -15,19 +38,13 @@
 }
 
 .larger-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   color: var(--white);
   font-weight: 700;
   background: var(--grey-fade);
-  border-radius: 5px;
-  width: 85px;
-  height: 30px;
-  margin: 5px;
+  width: 88px;
 
   & .awesome-icon {
-    margin-right: 5px;
+    margin-right: 4px;
   }
 }
 
@@ -38,17 +55,15 @@
 }
 
 .green-button {
-  margin: 5px 5px 5px 0;
+  margin: 4px 4px 4px 0;
   color: var(--white);
   text-align: center;
   font-size: 0.8rem;
   font-weight: 600;
   border: 0;
-  border-radius: 5px;
-  height: 20px;
   width: 80px;
   background-color: var(--green);
-  padding: 5px;
+  padding: 4px;
 
   &:hover {
     background-color: var(--dark-green);
@@ -56,23 +71,19 @@
 }
 
 .modal-button {
-  display: flex;
-  align-items: center;
-  height: 35px;
   width: 160px;
   color: var(--dark-grey);
   background-color: var(--light-grey);
   font-size: 0.8rem;
-  border-radius: 5px;
-  margin: 5px;
-  padding: 0 10px;
+  padding: 0 8px;
+  height: 32px;
 
   & .awesome-icon {
-    margin: 5px 10px 5px 5px;
+    margin: 4px 8px 4px 4px;
   }
 
   & p {
-    margin-left: 5px;
+    margin-left: 4px;
   }
 
   &:hover {
@@ -81,18 +92,12 @@
 }
 
 .transparent-button {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
   color: var(--grey);
-  font-weight: 400;
-  border-radius: 5px;
+  font-weight: var(--light);
   width: 100%;
-  height: 30px;
-  margin: 5px;
 
   & .awesome-icon {
-    margin-right: 10px;
+    margin-right: 8px;
   }
 
   &:hover {
@@ -101,27 +106,18 @@
 }
 
 .column-button {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
   color: var(--light-grey);
   background-color: rgba(0, 0, 0, 0.102);
-  font-weight: 400;
-  border-radius: 5px;
+  font-weight: var(--light);
   width: 250px;
-  height: 45px;
-  margin: 5px;
-  padding-left: 10px;
+  height: 44px;
+  padding-left: 8px;
 
   & .awesome-icon {
-    margin: 0 5px;
+    margin: 0 4px;
   }
 
   &:hover {
     background-color: rgba(0, 0, 0, 0.315);
   }
-}
-
-.square-button, .larger-button, .green-button, .modal-button, .transparent-button, .column-button {
-  cursor: pointer;
 } 
