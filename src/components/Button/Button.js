@@ -11,7 +11,7 @@ export const BUTTON_TYPES = {
     COLUMN: 'column-button'
 }
 
-export default function Button({ classType, text, icon, popover = false }) {
+export default function Button({classType, text, icon, popover = false}) {
 
     const ButtonContent = (
         <>
@@ -28,7 +28,7 @@ export default function Button({ classType, text, icon, popover = false }) {
 
     return (
         popover ? (
-            <button className={classType} popoverTarget='add-tag'>
+            <button className={classType} popovertarget='add-tag'>
                 {ButtonContent}
             </button>
         ) : (

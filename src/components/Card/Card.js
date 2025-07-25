@@ -16,9 +16,8 @@ export default function Card({ tags, title, text, columnIndex, cardIndex }) {
                         <div className='tags'>
                             {tags.map(tag => <Tag
                                 key={tag.id}
-                                name={tag.name}
-                                type={TAG_TYPES.SMALL}
-                                color={tag.color} />)}
+                                text={tag}
+                                type={TAG_TYPES.CARD}/>)}
                         </div>
                         <p className='card-title'>{title}</p>
                         <p className='card-text'>{text}</p>

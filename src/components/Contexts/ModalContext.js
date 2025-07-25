@@ -9,7 +9,7 @@ export default function ModalContextProvider({ children }) {
     const [comment, setComment] = useState('');
     const [comments, setComments] = useState([]);
     const [columns, setColumns] = useState(initialColumns);
-    const [selectedCard, setSelectedCard] = useState(null); // Will hold { columnIndex, cardIndex }
+    const [selectedCard, setSelectedCard] = useState(null);
 
     const toggleModal = () => {
         setModalVisible(!modalVisible);

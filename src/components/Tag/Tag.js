@@ -2,15 +2,16 @@ import React from 'react';
 import './Tag.css';
 
 export const TAG_TYPES = {
-    SMALL: 'small-tag',
-    BIG: 'big-tag'
+    BIG: 'big-tag',
+    CARD: 'card-tag',
+    SMALL: 'small-tag'
+    
 }
 
-export default function Tag({type, color, name}) {
+export default function Tag({type, text=''}) {
     return (
-        <div className={type}
-            style={{ backgroundColor: color }}>
-            {name}
+        <div className={`${type} ${text.toLowerCase()}`}>
+            {text}
         </div>
     );
 }

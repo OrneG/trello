@@ -16,7 +16,7 @@ export default function ButtonContainer({ modalButtons }) {
                     key={button.id || button.name}
                     icon={button.icon}
                     text={button.name}
-                    popover={button.name === 'Labels'}
+                    popover={button.name === 'Tags'}
                 />)}
             </div>
             <div className='button-container'>
@@ -41,10 +41,9 @@ export default function ButtonContainer({ modalButtons }) {
             <dialog popover='auto' id='add-tag'>
                 {tags.map(tag => <Tag
                                     key={tag.id}
-                                    name={tag.name}
                                     type={TAG_TYPES.SMALL}
-                                    color={tag.color}
-                                    popoverTarget='add-tag'/>)}
+                                    text={tag}
+                                    popovertarget='add-tag'/>)}
             </dialog>
         </>
     );

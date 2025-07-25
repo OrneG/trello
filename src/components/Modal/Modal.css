@@ -10,7 +10,7 @@
   background-color: var(--lighter-grey);
   top: 80px;
   left: 20%;
-  border-radius: 5px;
+  border-radius: 4px;
   box-shadow: 0 0 4px var(--dark-grey);
   padding:20px 0;
   scrollbar-width: none;

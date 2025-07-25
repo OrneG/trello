@@ -1,7 +1,13 @@
-.big-tag, .small-tag {
+.big-tag, .card-tag, .small-tag {
   border-radius: 8px;
   color: var(--lighter-grey);
   font-weight: bold;
+}
+
+.card-tag {
+  height: 12px;
+  width: 28px;
+  color: transparent;
 }
 
 .small-tag {
@@ -19,4 +25,24 @@
   &:hover {
     border-left: rgba(0, 0, 0, 0.219) 6px solid;
   }
+}
+
+.funcional {
+  background-color: var(--tag-f)
+}
+
+.maquetado {
+  background-color: var(--tag-m)
+}
+
+.desarrollo {
+  background-color: var(--tag-des)
+}
+
+.diseño {
+  background-color: var(--tag-di)
+}
+
+.bugs {
+  background-color: var(--tag-b)
 }

@@ -7,7 +7,7 @@ const modalButtons = [
         icon: faUser
     },
     {
-        name: 'Labels',
+        name: 'Tags',
         icon: faTag
     },
     {

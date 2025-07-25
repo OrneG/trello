@@ -6,45 +6,15 @@ const columns = [
         cards: [
             {
                 title: 'Terminar el proyecto',
-                text: '',
-                tags: [
-                    {
-                        name: 'Funcional',
-                        color: '#ff8718'
-                    },
-                    {
-                        name: 'Maquetado',
-                        color: '#03882c'
-                    },
-                    {
-                        name: 'Diseño',
-                        color: '#dfc534'
-                    }
-                ]
+                tags: ['Funcional', 'Maquetado', 'Diseño']
             },
             {
                 title: 'Practicar React',
-                text: '',
-                tags: [
-                    {
-                        name: 'Desarrollo',
-                        color: '#0079bf'
-                    }
-                ]
+                tags: ['Desarrollo']
             },
             {
                 title: 'Mejorar el aspecto del trello',
-                text: '',
-                tags: [
-                    {
-                        name: 'Maquetado',
-                        color: '#03882c'
-                    },
-                    {
-                        name: 'Diseño',
-                        color: '#dfc534'
-                    }
-                ]
+                tags: ['Maquetado', 'Diseño']
             }
         ]
     }

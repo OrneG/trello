@@ -1,10 +1,12 @@
 .add-card, textarea {
-  border-radius: 5px;
+  border-radius: 4px;
   border: none;
+}
+.add-card, .add-card-buttons {
+  display: flex;
 }
 
 .add-card {
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin: 10px 5px 5px 5px;
@@ -13,7 +15,7 @@
 }
 
 .card-p {
-  margin-left: 10px;
+  margin-left: 8px;
 }
 
 textarea {
@@ -25,7 +27,7 @@ textarea {
   overflow-y: auto;
   box-shadow: 0px 0px 2px #494949a4;
   min-height: 50px;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
   padding: 8px;
   width: 100%;
   height: auto;
@@ -33,6 +35,5 @@ textarea {
 }
 
 .add-card-buttons {
-  display: flex;
-  margin-bottom: 10px;
-} 
+  margin-bottom: 8px;
+}
