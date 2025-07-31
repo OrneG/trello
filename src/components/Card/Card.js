@@ -15,7 +15,7 @@ export default function Card({ tags, title, text, columnIndex, cardIndex }) {
                         }}>
                         <div className='tags'>
                             {tags.map(tag => <Tag
-                                key={tag.id}
+                                key={tag}
                                 text={tag}
                                 type={TAG_TYPES.CARD}/>)}
                         </div>

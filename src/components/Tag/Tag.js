@@ -8,10 +8,12 @@ export const TAG_TYPES = {
     
 }
 
-export default function Tag({type, text=''}) {
+export default function Tag({type, text='', onClick, isSelected = false}) {
     return (
-        <div className={`${type} ${text.toLowerCase()}`}>
+        <button 
+            className={`${type} ${text.toLowerCase()} ${isSelected ? 'selected' : ''}`}   
+            onClick={onClick}>
             {text}
-        </div>
+        </button>
     );
 }

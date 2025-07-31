@@ -25,6 +25,7 @@
 
 button {
   border: none;
+  font: inherit;
 }
 
 .square-button {

@@ -45,6 +45,34 @@ export default function ModalContextProvider({ children }) {
         }));
     };
 
+    const getSelectedCardTags = () => {
+        if (!selectedCard) return [];
+        const { columnIndex, cardIndex } = selectedCard;
+        if (columns[columnIndex] && columns[columnIndex].cards[cardIndex]) {
+            return columns[columnIndex].cards[cardIndex].tags || [];
+        }
+        return [];
+    };
+
+    const toggleCardTag = (tagName) => {
+        if (!selectedCard) return;
+        const { columnIndex, cardIndex } = selectedCard;
+        const currentTags = getSelectedCardTags();
+        const newTags = currentTags.includes(tagName)
+            ? currentTags.filter(tag => tag !== tagName)
+            : [...currentTags, tagName];
+        
+        setColumns(prevColumns => prevColumns.map((col, ci) => {
+            if (ci !== columnIndex) return col;
+            return {
+                ...col,
+                cards: col.cards.map((card, caIdx) =>
+                    caIdx === cardIndex ? { ...card, tags: newTags } : card
+                )
+            };
+        }));
+    };
+
     return (
         <ModalContext.Provider
             value={{
@@ -60,7 +88,9 @@ export default function ModalContextProvider({ children }) {
                 addComment,
                 selectedCard,
                 setSelectedCard,
-                updateCardDescription
+                updateCardDescription,
+                getSelectedCardTags,
+                toggleCardTag
             }}>
             {children}
         </ModalContext.Provider>
